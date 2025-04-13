@@ -1,117 +1,111 @@
-![Python](https://img.shields.io/badge/Python-3.9-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202025-blueviolet)
+📌 Credit Card Fraud Detection using Machine Learning
+Project Overview
+Developed by ReNewTech Solutions, this project applies Decision Tree and Support Vector Machine (SVM) models to detect fraudulent credit card transactions.
 
-[![Download Release](https://img.shields.io/github/v/release/ReNewTechSolutions/creditcard_fraud_detection?label=Download%20Release)](https://github.com/ReNewTechSolutions/creditcard_fraud_detection/releases/latest)
-[![GitHub Project](https://img.shields.io/badge/View%20Project-on%20GitHub-blue?logo=github)](https://github.com/ReNewTechSolutions/creditcard_fraud_detection)
+Highly imbalanced dataset (fraud ≈ 0.17% of transactions)
 
-Credit Card Fraud Detection using Machine Learning
-
-📌 Project Overview
-This project applies Decision Tree and Support Vector Machine (SVM) models to detect fraudulent credit card transactions.
-The dataset is highly imbalanced, reflecting real-world fraud detection challenges.
-
-We evaluate model performance:
+Models evaluated:
 
 Using all 30 original features
 
-After applying feature selection to choose the top 6 correlated features
+Using top 6 features most correlated with fraud
 
-Model metrics include Accuracy, ROC-AUC Score, Confusion Matrix, and Classification Report.
+Metrics:
 
-🛠 Project Structure
-graphql
-Copy
-Edit
-📁 creditcard_fraud_detection
-│── README.md                  # Project documentation
-│── train_decision_tree.py      # Decision Tree training and evaluation
-│── train_svm_model.py          # SVM model training and evaluation
-│── top6_feature_training.py    # Training on top 6 selected features
-│── visualize_roc_curves.py     # Visual ROC curve plots
-│── requirements.txt            # Required dependencies
-│── plots/                      # ROC Curve images and model visualizations
-📊 Dataset
-Source: Credit Card Fraud Detection dataset on Kaggle
+Accuracy
+
+ROC-AUC Score
+
+Confusion Matrix
+
+Precision, Recall, F1-Score
+
+Project Structure
+README.md — Project overview and documentation
+
+train_decision_tree.py — Train and evaluate Decision Tree model
+
+train_svm_model.py — Train and evaluate SVM model
+
+top6_feature_training.py — Train models with top 6 selected features
+
+visualize_roc_curves.py — Plot ROC curves for evaluation
+
+requirements.txt — Project dependencies
+
+plots/ — Folder for saved visualization images
+
+Dataset
+Source: Credit Card Fraud Detection (Kaggle)
 
 Real-world European card transactions
 
-Imbalanced dataset (fraudulent transactions ≈ 0.17%)
+Strong class imbalance (fraud is rare)
 
-📈 Models Used
+Machine Learning Models
 Decision Tree Classifier
 
-Support Vector Machine (LinearSVC)
+Support Vector Machine (SVM) — LinearSVC
 
-Both evaluated for:
+Both models evaluated:
 
-All features
+On all features
 
-Top 6 correlated features (based on Pearson correlation with the target)
+On the top 6 features identified via Pearson correlation
 
-✨ Enhancements from IBM Original Lab
-This project was inspired by coursework from the IBM Developer Skills Network (Machine Learning with Python specialization).
-However, it was extended and customized by:
+Enhancements Beyond IBM Course
+While inspired by the IBM Developer Skills Network (Machine Learning with Python specialization), this project by ReNewTech Solutions adds:
 
-Adding feature selection based on correlation analysis.
+Feature selection using correlation analysis
 
-Evaluating models on the reduced feature set for performance comparison.
+Reduced-feature model training and evaluation
 
-Visualizing ROC curves for Decision Tree and SVM models.
+Clean separation of training scripts for modularity
 
-All enhancements and restructuring were independently developed to extend learning beyond the course material.
+ROC curve visualizations
 
-🚀 How to Run This Project
-1️⃣ Clone the repository
+Structured project organization for real-world deployment
 
-bash
-Copy
-Edit
+How to Run
+# 1. Clone the repository
 git clone https://github.com/ReNewTechSolutions/creditcard_fraud_detection.git
 cd creditcard_fraud_detection
-2️⃣ Install dependencies
 
-bash
-Copy
-Edit
+# 2. Install dependencies
 pip install -r requirements.txt
-3️⃣ Train Decision Tree Model
 
-bash
-Copy
-Edit
+# 3. Train Decision Tree
 python train_decision_tree.py
-4️⃣ Train SVM Model
 
-bash
-Copy
-Edit
+# 4. Train SVM Model
 python train_svm_model.py
-5️⃣ Train and Evaluate Top 6 Features Only
 
-bash
-Copy
-Edit
+# 5. Train models on Top 6 features
 python top6_feature_training.py
-6️⃣ Visualize ROC Curves
 
-bash
-Copy
-Edit
+# 6. Visualize ROC Curves
 python visualize_roc_curves.py
-🛠 Future Improvements
-Experiment with XGBoost, Random Forest, and Gradient Boosting models.
 
-Handle imbalance with SMOTE or undersampling techniques.
+Future Improvements
+Introduce XGBoost, Random Forest, Gradient Boosting
 
-Hyperparameter tuning with GridSearchCV or RandomizedSearchCV.
+Apply SMOTE or undersampling for imbalance handling
 
-📌 Author
-Felicia Goad, ReNewTech Solutions
-MIT License
+Implement hyperparameter tuning (GridSearchCV, RandomizedSearchCV)
 
-🔗 Official Tagline:
+Explore real-time fraud prediction API deployment
 
-"Advanced Fraud Detection for a Safer Digital Future — ReNewTech Solutions 2025."
+Author
+Felicia Goad
+ReNewTech Solutions
+
+License
+This project is licensed under the MIT License.
+
+Official Tagline
+Advanced Fraud Detection for a Safer Digital Future — ReNewTech Solutions 2025
+
+Project Badges
+
+
 
