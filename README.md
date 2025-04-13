@@ -1,111 +1,124 @@
-📌 Credit Card Fraud Detection using Machine Learning
-Project Overview
-Developed by ReNewTech Solutions, this project applies Decision Tree and Support Vector Machine (SVM) models to detect fraudulent credit card transactions.
+# Credit Card Fraud Detection using Machine Learning  
+Developed by **ReNewTech Solutions**, this project applies Decision Tree and Support Vector Machine (SVM) models to detect fraudulent credit card transactions.
 
-Highly imbalanced dataset (fraud ≈ 0.17% of transactions)
+![Python](https://img.shields.io/badge/Python-3.9-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202025-blueviolet)
+[![Download Release](https://img.shields.io/github/v/release/ReNewTechSolutions/creditcard_fraud_detection?label=Download%20Release)](https://github.com/ReNewTechSolutions/creditcard_fraud_detection/releases/latest)
+[![GitHub Project](https://img.shields.io/badge/View%20Project-on%20GitHub-blue?logo=github)](https://github.com/ReNewTechSolutions/creditcard_fraud_detection)
 
-Models evaluated:
+---
 
-Using all 30 original features
+## 📌 Project Overview
+This project tackles the challenge of detecting credit card fraud using machine learning models on a highly imbalanced dataset (fraud ≈ **0.17%** of transactions).
 
-Using top 6 features most correlated with fraud
+**Models Evaluated:**
+- Using **all 30 original features**
+- Using **top 6 features most correlated** with fraud
 
-Metrics:
+**Metrics Evaluated:**
+- Accuracy
+- ROC-AUC Score
+- Confusion Matrix
+- Precision, Recall, F1-Score
 
-Accuracy
+---
 
-ROC-AUC Score
+## 🛠 Project Structure
 
-Confusion Matrix
+```plaintext
+creditcard_fraud_detection/
+│── README.md                  # Project overview and documentation
+│── requirements.txt            # Required Python libraries
+│── train_decision_tree.py       # Train and evaluate Decision Tree model
+│── train_svm_model.py           # Train and evaluate SVM model
+│── top6_feature_training.py     # Train models using top 6 features
+│── visualize_roc_curves.py      # Plot and compare ROC curves
+│── plots/                      # ROC curve images and visualizations
+📊 Dataset
+Source: Credit Card Fraud Detection dataset from Kaggle
 
-Precision, Recall, F1-Score
+Details: Real-world European card transactions
 
-Project Structure
-README.md — Project overview and documentation
+Challenge: Highly imbalanced (only ~0.17% are fraudulent)
 
-train_decision_tree.py — Train and evaluate Decision Tree model
-
-train_svm_model.py — Train and evaluate SVM model
-
-top6_feature_training.py — Train models with top 6 selected features
-
-visualize_roc_curves.py — Plot ROC curves for evaluation
-
-requirements.txt — Project dependencies
-
-plots/ — Folder for saved visualization images
-
-Dataset
-Source: Credit Card Fraud Detection (Kaggle)
-
-Real-world European card transactions
-
-Strong class imbalance (fraud is rare)
-
-Machine Learning Models
+📈 Models Used
 Decision Tree Classifier
 
-Support Vector Machine (SVM) — LinearSVC
+Support Vector Machine (LinearSVC)
 
-Both models evaluated:
+Both models were evaluated for:
 
-On all features
+Full feature set
 
-On the top 6 features identified via Pearson correlation
+Top 6 selected features
 
-Enhancements Beyond IBM Course
-While inspired by the IBM Developer Skills Network (Machine Learning with Python specialization), this project by ReNewTech Solutions adds:
+✨ Enhancements Beyond IBM Course
+This project was inspired by coursework from the IBM Developer Skills Network (Machine Learning with Python specialization).
 
-Feature selection using correlation analysis
+Enhancements made by ReNewTech Solutions:
 
-Reduced-feature model training and evaluation
+Added feature selection based on correlation analysis
 
-Clean separation of training scripts for modularity
+Trained and compared models on reduced feature sets
 
-ROC curve visualizations
+Visualized ROC curves for performance insights
 
-Structured project organization for real-world deployment
+Reorganized project structure and documentation
 
-How to Run
-# 1. Clone the repository
+All code restructuring and upgrades were independently developed to deepen practical understanding.
+
+🚀 How to Run This Project
+1️⃣ Clone the Repository
+
+bash
+Copy
+Edit
 git clone https://github.com/ReNewTechSolutions/creditcard_fraud_detection.git
 cd creditcard_fraud_detection
+2️⃣ Install Required Libraries
 
-# 2. Install dependencies
+bash
+Copy
+Edit
 pip install -r requirements.txt
+3️⃣ Train Decision Tree Model
 
-# 3. Train Decision Tree
+bash
+Copy
+Edit
 python train_decision_tree.py
+4️⃣ Train SVM Model
 
-# 4. Train SVM Model
+bash
+Copy
+Edit
 python train_svm_model.py
+5️⃣ Train and Evaluate on Top 6 Features
 
-# 5. Train models on Top 6 features
+bash
+Copy
+Edit
 python top6_feature_training.py
+6️⃣ Visualize ROC Curves
 
-# 6. Visualize ROC Curves
+bash
+Copy
+Edit
 python visualize_roc_curves.py
+🛠 Future Improvements
+Experiment with XGBoost, Random Forest, and Gradient Boosting
 
-Future Improvements
-Introduce XGBoost, Random Forest, Gradient Boosting
+Address class imbalance with SMOTE or undersampling
 
-Apply SMOTE or undersampling for imbalance handling
+Apply hyperparameter tuning (GridSearchCV, RandomizedSearchCV)
 
-Implement hyperparameter tuning (GridSearchCV, RandomizedSearchCV)
+📌 Author
+Felicia Goad, ReNewTech Solutions
 
-Explore real-time fraud prediction API deployment
+📜 License
+MIT License
 
-Author
-Felicia Goad
-ReNewTech Solutions
-
-License
-This project is licensed under the MIT License.
-
-Official Tagline
-Advanced Fraud Detection for a Safer Digital Future — ReNewTech Solutions 2025
-
-Project Badges
-
-
-
+🔥 Official Tagline:
+Advanced Fraud Detection for a Safer Digital Future — ReNewTech Solutions 2025.
